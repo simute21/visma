@@ -7,7 +7,7 @@ npm run dev
 ```
 (concurrently starts server and client)
 
-3. Add .env file
+3. Add .env file in the root folder
 
 Written in Node js, TypeScript and React
 
