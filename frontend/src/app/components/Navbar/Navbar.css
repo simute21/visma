@@ -1,0 +1,10 @@
+.navbar img{
+    max-width: 100px;
+    width: 100%;
+}
+.navbar {
+    display: flex;
+}
+.navbar ul {
+    list-style: none;
+}

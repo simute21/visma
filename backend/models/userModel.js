@@ -1,53 +1,15 @@
 const mongoose = require('mongoose')
 
-// const addressSchema = mongoose.Schema({
-//     city: {
-//         type: String,
-//         required: [true, 'Please add a city']
-//     },
-//     street: {
-//         type: String,
-//         required: [true, 'Please add a street name']
-//     },
-//     houseNumber: {
-//         type: Number,
-//         required: [true, 'Please add a house number']
-//     },
-//     zipCode: {
-//         type: Number, 
-//         required: [true, 'Please add a zip code']
-//     }
-// }, {_id: false})
-
 const userSchema = mongoose.Schema({
-    fullName: {
-        type: String,
-        required: [true, 'Please add a username']
-    }, 
     email: {
-        type: String, 
-        required: [true, 'Please add an email']
+        type: String,
+        required: [true, 'Please add an email'],
+        unique: true
     },
-    address: {
-        city: {
-            type: String,
-            required: [true, 'Please add a city']
-        },
-        street: {
-            type: String, 
-            required: [true, 'Please add a street name']
-        },
-        houseNumber: {
-            type: Number, 
-            required: [true, 'Please add a house number']
-        },
-        zipCode: {
-            type: Number,
-            required: [true, 'Please add a zip code']
-        }
+    password: {
+        type: String,
+        required: [true, 'Please add a password'],
     }
-}, {
-    timestamps: true
-})
+}, {timestamps: true})
 
-module.exports = mongoose.model('UserModel', userSchema)
+module.exports = mongoose.model('User', userSchema)
